@@ -94,6 +94,31 @@ The concrete speedup of course would depend on the content of the tests,
 but even without using snapshots we would need to execute at most as 
 many scenarios as we have leaf nodes on the tree.
 
+So, the example used above would become the equivalent of the below
+sequence of (fluent) code:
+
+```python
+session('admin'
+    ).as_admin().create_user(
+            username = 'jane doe', password = '1234', can_login = True
+).session('user'
+    ).as_anonymous().login(
+        username = 'jane doe', password = 'not matching password'
+    ).assert_warning_is_present(
+        'Invalid username or password'
+    ).as_anonymous().login(
+        username = 'jane doe', password = 'not matching password'
+    ).assert_warning_is_present(
+        'Invalid username or password'
+    ).as_anonymous().login(
+        username = 'jane doe', password = 'not matching password'
+    ).assert_warning_is_present(
+        'Invalid username or password'
+).switch_to_session('admin'
+    ).assert_account_is_locked(username = 'jane doe')
+```
+
+
 
 ## Assumptions, constraints, and questions
 
