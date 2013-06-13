@@ -129,7 +129,7 @@ project sponsors and stakeholders can understand.
 
 ## Additional benefits (taking it further)
 
-## Visualization
+### Visualization
 
 Looking at such a tree graph effectively conveys a lot of metadata:
 
@@ -142,7 +142,7 @@ Looking at such a tree graph effectively conveys a lot of metadata:
   dragonlairs pretty well without any tool's help)
 
 
-## Missing testcase discovery
+### Missing testcase discovery
 
 Automated tests provide a safety net against regression bugs, but if 
 you forgot to write test(s) for some scenario(s), and it wasn't caught
@@ -159,7 +159,7 @@ the other places that should assert against this new feature. Of
 course, this wouldn't be 100% accurate, but might be more than what we
 already have.
 
-## Designers dream
+### Designers dream
 
 I really dread when our (wonderful!) designer comes over and asks me
 for all possible examples for a given template...
