@@ -1,10 +1,10 @@
-# TreeTest
+# TreeRunner
 
 _Note: at this stage, this is an alpha, proof-of-concept level code!_
 
 ## History / Explanation
 
-The idea of TreeTest grew out from the pain of a codebase with too many
+The idea of TreeRunner grew out from the pain of a codebase with too many
 integrated tests - it took forever to run them all. One of the reasons
 for the slownes was that the same scenarios were repeated across multiple
 tests, but in such a way that it's impossible to structure them into
